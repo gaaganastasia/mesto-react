@@ -1,7 +1,7 @@
+import React from 'react';
 import Header from './Header.js';
 import Main from './Main.js';
 import Footer from './Footer.js';
-import React from 'react';
 
 function App() {
   let [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = React.useState(false);
