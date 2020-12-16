@@ -98,7 +98,7 @@ class Api {
         .catch(handleError);
     }
   }
-};
+}
 
 const api = new Api({
   url: "https://mesto.nomoreparties.co/v1/cohort-17",
