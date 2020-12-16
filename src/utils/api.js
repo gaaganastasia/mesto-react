@@ -81,22 +81,22 @@ class Api {
       .catch(handleError);
   }
 
-  addLike(cardId) {
-    return fetch(`${this._url}/cards/likes/${cardId}`, {
-      method: "PUT",
-      headers: this._headers,
-    })
-      .then(handleOriginalResponse)
-      .catch(handleError);
-  }
-
-  removeLike(cardId) {
-    return fetch(`${this._url}/cards/likes/${cardId}`, {
-      method: "DELETE",
-      headers: this._headers,
-    })
-      .then(handleOriginalResponse)
-      .catch(handleError);
+  changeLikeCardStatus(cardId, isLiked) {
+    if (isLiked) {
+      return fetch(`${this._url}/cards/likes/${cardId}`, {
+        method: "PUT",
+        headers: this._headers,
+      })
+        .then(handleOriginalResponse)
+        .catch(handleError);
+    } else {
+      return fetch(`${this._url}/cards/likes/${cardId}`, {
+        method: "DELETE",
+        headers: this._headers,
+      })
+        .then(handleOriginalResponse)
+        .catch(handleError);
+    }
   }
 };
 

@@ -2,8 +2,10 @@
   background-color: #000000;
   background-image: url(../../../images/edit-button.svg);
   background-size: contain;
-  border: 1px solid #ffffff;
+  background-repeat: no-repeat;
+  background-position: center;
   box-sizing: border-box;
+  border: none;
   align-self: center;
   outline: 0;
 }
